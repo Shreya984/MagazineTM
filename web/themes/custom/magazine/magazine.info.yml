@@ -1,0 +1,19 @@
+name: Magazine
+type: theme
+description: A theme for a magazine
+core_version_requirement: ^10
+package: Magazine
+base theme: olivero
+
+regions:
+  header: 'Header'
+  primary_menu: 'Primary Menu'
+  highlighted: 'Highlighted'
+  content: 'Content'
+  footer: 'Footer'
+  page_top: 'Page Top'
+  page_bottom: 'Page Bottom'
+
+libraries:
+  - magazine/bootstrap
+  - magazine/fontawesome

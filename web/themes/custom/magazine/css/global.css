@@ -1,0 +1,147 @@
+.logo {
+  margin: 8px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #000;
+  font-size: 32px;
+}
+
+.social {
+  margin: 8px;
+  padding: 8px;
+}
+
+.social i {
+  color: #000;
+  font-size: 20px;
+}
+
+.social a {
+  padding-left: 8px;
+}
+
+.mobile-nav-button__icon::before,
+.mobile-nav-button__icon::after {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 0;
+  content: "";
+  transition: transform 0.2s;
+  border-top: solid 3px #000;
+  /* Change is here.*/
+}
+
+.header-nav > div > figure{
+  max-width: fit-content !important;
+}
+
+.header-nav {
+  display: grid;
+  align-items: start;
+  justify-content: start;
+  grid-template-columns: 1fr 1fr;
+  z-index: 501;
+  /* Appear above overlay and contextual links in header. */
+  inset-block-start: 0;
+  inset-inline-start: 0%;
+  /* Change is here.*/
+  visibility: hidden;
+  overflow: auto;
+  /* Ensure that header nav not use additional space and force system branding
+   * block text to unnecessarily wrap. */
+  flex-basis: max-content;
+  width: 50vw;
+  max-width: none !important;
+  height: 100%;
+  padding-block: 0 var(--sp);
+  padding-inline-start: var(--sp);
+  padding-inline-end: var(--sp);
+  /* Create room for the "close" button. We cannot use margin because the
+   * mobile navigation needs to slide beneath the button, but we also cannot
+   * use padding because that would enable the button to scroll out of the
+   * viewport on short screens. */
+  border-block-start: solid var(--color--white) calc(var(--sp3) + var(--drupal-displace-offset-top, 0px));
+  background-color: var(--color--white);
+  box-shadow: 0 0 72px rgba(0, 0, 0, 0.1);
+}
+
+.header-nav > div {
+  padding: 1rem 2rem;
+}
+
+/* Change is here.*/
+.header-nav.is-active {
+  visibility: visible;
+  transform: translateX(calc(0% + var(--drupal-displace-offset-left, 0px)));
+  width: 50vw;
+  /* LTR */
+}
+
+[dir="rtl"] .header-nav.is-active {
+  transform: translateX(calc(0% - var(--drupal-displace-offset-right, 0px)));
+}
+
+/* Change ends here.*/
+
+@media (min-width: 43.75rem) {
+  .mobile-buttons {
+    margin-block-start: var(--sp4);
+    margin: 0;
+    /* Change is here.*/
+  }
+}
+
+.field {
+  padding: 16px;
+}
+
+/* .block__content {
+  max-width: fit-content;
+} */
+
+.block-field-blocknodemagazine-pagesfield-hero-image, .field--name-field-media-image {
+  max-width: fit-content;
+}
+
+.block-field-blocknodemagazine-pagesfield-hero-image > div > div > div > div > img {
+  width: 75vw;
+  height: auto;
+}
+
+.block-search-narrow {
+  margin-inline: calc(-1 * var(--sp));
+  margin-block-end: var(--sp2);
+  background: #fff;
+  border: 1px solid rgba(239, 239, 240, 1);
+}
+
+.field--name-field-category, .field--name-field-heading, .field--name-field-date {
+  text-align: center;
+}
+
+.field--name-field-heading {
+  font-size: 32px;
+}
+
+.block__title, .field__label {
+  display: none;
+}
+
+.field:not(:last-child) {
+  margin-block-end: 0px;
+}
+
+.block-block-content83a452fe-589f-4186-a0d5-a02867695672 {
+  border: 4px solid rgba(239, 239, 240, 1);
+}
+
+.block__content {
+  display: grid;
+  align-items: start;
+  justify-content: start;
+  grid-template-columns: 1fr 1fr;
+}
