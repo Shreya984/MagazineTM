@@ -46,7 +46,7 @@
  */
 #}
 
-<div id="page-wrapper" class="page-wrapper">
+<div id="page-wrapper" class="page-wrapper container">
   <div id="page">
 
     {% if page.header or page.primary_menu or page.secondary_menu %}
@@ -108,7 +108,9 @@
       </header>
     {% endif %}
 
-    <div id="main-wrapper" class="layout-main-wrapper layout-container">
+    {{ page.content }}
+
+    {# <div id="main-wrapper" class="layout-main-wrapper layout-container">
       <div id="main" class="layout-main">
         <div class="main-content">
           <a id="main-content" tabindex="-1"></a>
@@ -133,12 +135,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> #}
 
-    <footer class="site-footer">
+    <footer id="fh5co-footer" class="site-footer">
       <div class="site-footer__inner container">
-        {{ page.footer_top }}
-        {{ page.footer_bottom }}
+        <p><small>&copy; 2016. Magazine Free HTML5. All Rights Reserverd. <br> Designed by <a href="http://freehtml5.co" target="_blank">FREEHTML5.co</a>  Demo Images: <a href="http://unsplash.com/" target="_blank">Unsplash</a></small></p>
+        {{ page.footer }}
       </div>
     </footer>
 

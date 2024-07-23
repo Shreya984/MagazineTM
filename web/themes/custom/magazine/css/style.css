@@ -41,6 +41,7 @@ a {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  /* text-decoration: none; */
 }
 a:hover, a:focus, a:active {
   color: #f3ac2b;
@@ -640,7 +641,7 @@ figure figcaption {
 .js .to-animate, .js
 .to-animate-2, .js
 .animate-box {
-  opacity: 0;
+  opacity: 1;
 }
 
 .fh5co-nav-toggle {
